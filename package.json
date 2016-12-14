@@ -11,7 +11,7 @@
   "keywords": [
     "babel-plugin"
   ],
-  "dependencies": {
-    "lodash": "4.9.0"
+  "peerDependencies": {
+    "lodash": "^4.9"
   }
 }
