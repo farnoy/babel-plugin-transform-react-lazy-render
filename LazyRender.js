@@ -91,7 +91,9 @@
     _createClass(LazyRender, [{
       key: 'shouldComponentUpdate',
       value: function shouldComponentUpdate(nextProps) /* nextState */{
-        return !guidedShallowCompare(this.props, nextProps, (0, _lodash.without)(Object.keys(nextProps), 'children'));
+        var keys = Object.keys(nextProps);
+        (0, _lodash.pull)(keys, 'children');
+        return !guidedShallowCompare(this.props, nextProps, keys);
       }
     }, {
       key: 'render',
