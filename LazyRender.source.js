@@ -1,5 +1,6 @@
 import React from 'react';
 import {pull} from 'lodash';
+import PropTypes from 'prop-types';
 
 function guidedShallowCompare() {
   if (arguments.length < 3)
@@ -38,7 +39,7 @@ function guidedShallowCompare() {
 
 export default class LazyRender extends React.Component {
   static propTypes = {
-    children: React.PropTypes.func.isRequired
+    children: PropTypes.func.isRequired
   };
 
   shouldComponentUpdate(nextProps, /* nextState */) {
